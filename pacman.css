@@ -1,0 +1,131 @@
+/* CONTENEDOR PAC-MAN Y CONTROLES */
+.pacman-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    background: var(--card-bg, #13132b);
+    border: 3px solid var(--neon-pink, #ff007f);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(255, 0, 127, 0.2);
+    margin: 0 auto;
+    max-width: 750px;
+}
+
+.canvas-container {
+    position: relative;
+    width: 380px;
+    height: 380px;
+    background: #000;
+    border: 3px solid var(--neon-blue, #00f0ff);
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+}
+
+#pacmanCanvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.game-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    z-index: 10;
+}
+
+#overlayText {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 1rem;
+    color: var(--neon-yellow, #f3e600);
+    text-align: center;
+}
+
+/* PANEL LATERAL Y BOTONES A LA DERECHA */
+.pacman-controls-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 380px;
+    min-width: 180px;
+}
+
+.score-board {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.9rem;
+    color: var(--neon-green, #39ff14);
+    background: #06060c;
+    border: 2px solid var(--neon-green, #39ff14);
+    padding: 12px 15px;
+    border-radius: 4px;
+    text-align: center;
+    width: 100%;
+}
+
+/* CRUCETA / D-PAD DERECHA */
+.dpad {
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    grid-template-rows: repeat(3, 50px);
+    gap: 5px;
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.dbtn {
+    background: #1f1f3f;
+    border: 2px solid var(--neon-blue, #00f0ff);
+    color: var(--neon-blue, #00f0ff);
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    user-select: none;
+    -webkit-user-select: none;
+    transition: all 0.1s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dbtn:active {
+    background: var(--neon-blue, #00f0ff);
+    color: #000;
+    transform: scale(0.92);
+}
+
+.dbtn.up { grid-column: 2; grid-row: 1; }
+.dbtn.left { grid-column: 1; grid-row: 2; }
+.dbtn.right { grid-column: 3; grid-row: 2; }
+.dbtn.down { grid-column: 2; grid-row: 3; }
+
+/* ADAPTACIÓN RECEPTIVA PARA MÓVILES */
+@media (max-width: 680px) {
+    .pacman-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .canvas-container {
+        width: 100%;
+        max-width: 320px;
+        height: 320px;
+    }
+
+    .pacman-controls-panel {
+        height: auto;
+        width: 100%;
+        gap: 15px;
+    }
+}
