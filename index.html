@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetroVerse - Historia de los Videojuegos y Consolas</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fuente estilo arcade / retro -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- EFECTO CRT (Por defecto desactivado con la clase .off) -->
+    <div id="crtOverlay" class="crt-overlay">
+        <div class="scanline"></div>
+        <div class="screen-curve"></div>
+    </div>
+
+    <!-- BOTONES FLOTANTES DE CONTROL -->
+    <div class="floating-controls">
+        <button id="crtToggle" class="btn-control" title="Activar/Desactivar efecto CRT">📺 Tubo CRT: OFF</button>
+        <button id="soundToggle" class="btn-control">🔊 Sonido: OFF</button>
+    </div>
+
+    <!-- HEADER / HERO -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="glitch" data-text="RETROVERSE">RETROVERSE</h1>
+            <p class="subtitle">El viaje definitivo desde los inicios de los fichines hasta la era de la alta definición (Hasta PS3)</p>
+            <a href="#cronologia" class="btn-retro">EMPEZAR VIAJE</a>
+        </div>
+    </header>
+
+    <!-- CRONOLOGÍA DE CONSOLAS -->
+    <section id="cronologia" class="container">
+        <h2 class="section-title">⏱️ CRONOLOGÍA HISTÓRICA</h2>
+        <p class="section-hint">💡 Haz clic en cualquier tarjeta de consola para desplegar sus 3 juegos revolucionarios.</p>
+        
+        <div class="timeline">
+            
+            <!-- Magnavox Odyssey -->
+            <div class="console-card" data-console="odyssey">
+                <div class="console-year">1972</div>
+                <div class="console-info">
+                    <h3>Magnavox Odyssey</h3>
+                    <p class="console-desc">La primera consola de videojuegos doméstica de la historia.</p>
+                    <div class="games-dropdown">
+                        <h4>Juegos Revolucionarios:</h4>
+                        <ul>
+                            <li><strong>Table Tennis:</strong> Introdujo el concepto de deporte interactivo en la pantalla del hogar.</li>
+                            <li><strong>Wipeout:</strong> Pionero en el uso de plantillas superpuestas de plástico transparente en el televisor.</li>
+                            <li><strong>Ski:</strong> Estableció las bases mecánicas para los juegos de simulación deportiva simple.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Atari 2600 -->
+            <div class="console-card" data-console="atari">
+                <div class="console-year">1977</div>
+                <div class="console-info">
+                    <h3>Atari 2600</h3>
+                    <p class="console-desc">Popularizó los cartuchos intercambiables y definió la era dorada de los arcades en casa.</p>
+                    <div class="games-dropdown">
+                        <h4>Juegos Revolucionarios:</h4>
+                        <ul>
+                            <li><strong>Combat:</strong> Demostró el enorme potencial del entretenimiento multijugador competitivo en casa.</li>
+                            <li><strong>Adventure:</strong> Considerado el padre de los juegos de aventura gráfica y el primer "Easter Egg" oculto.</li>
+                            <li><strong>Pac-Man:</strong> Aunque polémico por su port, consolidó la llegada de los grandes éxitos de arcade al hogar.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NES -->
+            <div class="console-card" data-console="nes">
+                <div class="console-year">1983</div>
+                <div class="console-info">
+                    <h3>Nintendo Entertainment System (NES)</h3>
+                    <p class="console-desc">Resucitó la industria de los videojuegos tras la crisis de 1983.</p>
+                    <div class="games-dropdown">
+                        <h4>Juegos Revolucionarios:</h4>
+                        <ul>
+                            <li><strong>Super Mario Bros.:</strong> Redefinió el género de plataformas de desplazamiento lateral para siempre.</li>
+                            <li><strong>The Legend of Zelda:</strong> Sentó las bases de la exploración abierta y guardado de partidas en consolas.</li>
+                            <li><strong>Metroid:</strong> Pionero en la atmósfera de ciencia ficción interconectada y progresión por habilidades.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sega Genesis / Mega Drive -->
+            <div class="console-card" data-console="genesis">
+                <div class="console-year">1988</div>
+                <div class="console-info">
+                    <h3>Sega Genesis (Mega Drive)</h3>
+                    <p class="console-desc">La abanderada de la era de los 16 bits y la feroz competencia directa.</p>
+                    <div class="games-dropdown">
+                        <h4>Juegos Revolucionarios:</h4>
+                        <ul>
+                            <li><strong>Sonic the Hedgehog:</strong> Demostró una velocidad de procesamiento sin precedentes en la industria.</li>
+                            <li><strong>Streets of Rage 2:</strong> Elevó el género "Yo contra el barrio" (Beat 'em up) a su máxima expresión.</li>
+                            <li><strong>Gunstar Heroes:</strong> Obra maestra del género "run and gun" con acción frenética inigualable.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Super Nintendo (SNES) -->
+            <div class="console-card" data-console="snes">
+                <div class="console-year">1990</div>
+                <div class="console-info">
+                    <h3>Super Nintendo (SNES)</h3>
+                    <p class="console-desc">El pináculo de los 16 bits con gráficos coloridos y efectos Modo 7.</p>
+                    <div class="games-dropdown">
+                        <h4>Juegos Revolucionarios:</h4>
+                        <ul>
+                            <li><strong>Super Mario World:</strong> Perfeccionó la jugabilidad clásica y añadió mapas dinámicos y secretos.</li>
+                            <li><strong>Chrono Trigger:</strong> Revolucionó los JRPG con viajes en el tiempo y finales múltiples.</li>
+                            <li><strong>The Legend of Zelda: A Link to the Past:</strong> Estableció la estructura definitiva de mazmorras y mundos paralelos.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sony PlayStation -->
+            <div class="console-card" data-console="ps1">
+                <div class="console-year">1994</div>
+                <div class="console-info">
+                    <h3>Sony PlayStation</h3>
+                    <p class="console-desc">Popularizó el CD-ROM y revolucionó los gráficos en 3D poligonales.</p>
+                    <div class="games-dropdown">
+                        <h4>Juegos Revolucionarios:</h4>
+                        <ul>
+                            <li><strong>Final Fantasy VII:</strong> Cambió los estándares narrativos y cinematográficos de los videojuegos.</li>
+                            <li><strong>Metal Gear Solid:</strong> Popularizó el género de infiltración táctica (Stealth) con doblaje cinematográfico.</li>
+                            <li><strong>Gran Turismo:</strong> El simulador de conducción definitivo que revolucionó el realismo automovilístico.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nintendo 64 -->
+            <div class="console-card" data-console="n64">
+                <div class="console-year">1996</div>
+                <div class="console-info">
+                    <h3>Nintendo 64</h3>
+                    <p class="console-desc">Líder indiscutible del 3D multijugador local y controles analógicos.</p>
+                    <div class="games-dropdown">
+                        <h4>Juegos Revolucionarios:</h4>
+                        <ul>
+                            <li><strong>Super Mario 64:</strong> Tradujo el género de plataformas al espacio tridimensional de forma magistral.</li>
+                            <li><strong>The Legend of Zelda: Ocarina of Time:</strong> Introdujo el sistema de fijado de blancos ("Z-targeting") para combates en 3D.</li>
+                            <li><strong>GoldenEye 007:</strong> Demostró que los shooters en primera persona podían funcionar brillantemente en consolas.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sega Dreamcast -->
+            <div class="console-card" data-console="dreamcast">
+                <div class="console-year">1998</div>
+                <div class="console-info">
+                    <h3>Sega Dreamcast</h3>
+                    <p class="console-desc">La adelantada a su tiempo, pionera en juego online y modem integrado.</p>
+                    <div class="games-dropdown">
+                        <h4>Juegos Revolucionarios:</h4>
+                        <ul>
+                            <li><strong>Shenmue:</strong> Pionero en mundos abiertos detallados, ciclo día/noche y eventos de acción rápida (QTE).</li>
+                            <li><strong>Soulcalibur:</strong> Revolucionó los juegos de lucha en 3D con un apartado visual arcade inalcanzable en su época.</li>
+                            <li><strong>Sonic Adventure:</strong> Llevó al erizo azul al entorno 3D con tramas cinemáticas independientes.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sony PlayStation 2 -->
+            <div class="console-card" data-console="ps2">
+                <div class="console-year">2000</div>
+                <div class="console-info">
+                    <h3>Sony PlayStation 2</h3>
+                    <p class="console-desc">La consola más vendida de la historia y reproductor multimedia DVD.</p>
+                    <div class="games-dropdown">
+                        <h4>Juegos Revolucionarios:</h4>
+                        <ul>
+                            <li><strong>Grand Theft Auto: San Andreas:</strong> Consolidó el fenómeno de los mundos abiertos masivos y la libertad de acción.</li>
+                            <li><strong>Shadow of the Colossus:</strong> Una obra de arte interactiva que redefinió la escala épica y la melancolía jugable.</li>
+                            <li><strong>God of War:</strong> Llevó los hack and slash mitológicos a cotas de acción y brutalidad técnica impresionantes.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Microsoft Xbox 360 -->
+            <div class="console-card" data-console="xbox360">
+                <div class="console-year">2005</div>
+                <div class="console-info">
+                    <h3>Microsoft Xbox 360</h3>
+                    <p class="console-desc">Pionera en el juego online unificado con Xbox Live y los logros digitales.</p>
+                    <div class="games-dropdown">
+                        <h4>Juegos Revolucionarios:</h4>
+                        <ul>
+                            <li><strong>Halo 3:</strong> Definió la experiencia multijugador masiva en línea de la séptima generación de consolas.</li>
+                            <li><strong>Gears of War:</strong> Popularizó el sistema de coberturas tácticas que imitaron decenas de shooters posteriores.</li>
+                            <li><strong>BioShock:</strong> Marcó un hito en la narrativa madura y la ambientación distópica en entornos sumergidos.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sony PlayStation 3 -->
+            <div class="console-card" data-console="ps3">
+                <div class="console-year">2006</div>
+                <div class="console-info">
+                    <h3>Sony PlayStation 3</h3>
+                    <p class="console-desc">Introdujo la arquitectura Cell, el formato Blu-ray y gráficos en Alta Definición (HD).</p>
+                    <div class="games-dropdown">
+                        <h4>Juegos Revolucionarios:</h4>
+                        <ul>
+                            <li><strong>The Last of Us:</strong> Elevó el listón de la narrativa dramática, la actuación de voz y la supervivencia en la industria.</li>
+                            <li><strong>Uncharted 2: Among Thieves:</strong> Fusionó la aventura cinematográfica y los scripts de acción al nivel de Hollywood.</li>
+                            <li><strong>Demon's Souls:</strong> Dio origen al subgénero "Soulslike", redefiniendo la dificultad y la satisfacción por superación.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PROYECTOS PERSONALES / REDES -->
+    <section class="container projects-section">
+        <h2 class="section-title">📂 PROYECTOS Y CONTENIDO</h2>
+        <p class="section-desc">Echa un vistazo a mis trabajos, reparaciones y contenido retro en mis redes:</p>
+        
+        <div class="social-grid">
+            <a href="https://www.instagram.com/tipitochen" target="_blank" class="social-card instagram">
+                <div class="social-icon">📸</div>
+                <h3>Instagram</h3>
+                <p>@tipitochen</p>
+                <span class="link-btn">Visitar Perfil</span>
+            </a>
+
+            <a href="https://www.youtube.com/@tipitochen" target="_blank" class="social-card youtube">
+                <div class="social-icon">▶️</div>
+                <h3>YouTube</h3>
+                <p>Canal Oficial</p>
+                <span class="link-btn">Ver Videos</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2006 RetroVerse. Manteniendo vivo el espíritu pixelado.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
