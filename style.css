@@ -101,30 +101,57 @@ body {
     color: var(--bg-color);
 }
 
-/* HEADER / HERO */
+/* HEADER / HERO RECEPTIVO */
 .hero {
-    height: 100vh;
+    min-height: 100dvh; /* Adaptable a la altura del navegador móvil */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     background: radial-gradient(circle, #1a1a3a 0%, var(--bg-color) 80%);
     border-bottom: 4px solid var(--neon-blue);
-    padding: 20px;
+    padding: 80px 20px 40px 20px;
+    width: 100%;
+}
+
+.hero-content {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .hero-content h1 {
     font-family: var(--font-arcade);
-    font-size: 3rem;
+    /* Se escala dinámicamente: Mínimo 1.5rem, ideal 6vw, máximo 3rem */
+    font-size: clamp(1.5rem, 6vw, 3rem);
+    line-height: 1.3;
+    word-break: break-word; /* Evita que rompa el contenedor en pantallas muy estrechas */
     color: var(--neon-pink);
-    text-shadow: 4px 4px var(--neon-blue), -4px -4px var(--neon-green);
+    text-shadow: 3px 3px var(--neon-blue), -3px -3px var(--neon-green);
     margin-bottom: 20px;
 }
 
 .subtitle {
-    font-size: 1.5rem;
+    /* Se escala dinámicamente: Mínimo 1rem, ideal 3.5vw, máximo 1.5rem */
+    font-size: clamp(1rem, 3.5vw, 1.5rem);
+    line-height: 1.4;
     color: var(--neon-yellow);
-    margin-bottom: 40px;
+    margin-bottom: 35px;
+    padding: 0 10px;
+}
+
+/* Ajustes específicos para pantallas pequeñas (móviles <= 480px) */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        text-shadow: 2px 2px var(--neon-blue), -2px -2px var(--neon-green);
+    }
+    
+    .btn-retro {
+        font-size: 0.75rem;
+        padding: 12px 20px;
+        width: 90%;
+        max-width: 280px;
+    }
 }
 
 /* BOTONES RETRO */
